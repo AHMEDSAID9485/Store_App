@@ -1,18 +1,12 @@
-# إجبار GitHub على تجاهل أكواد المنصات في احتساب لغات المشروع
-*.cpp linguist-vendored
-*.h linguist-vendored
-*.cc linguist-vendored
-*.cxx linguist-vendored
-*.cmake linguist-vendored
-CMakeLists.txt linguist-vendored
+# إخفاء مجلدات المنصات تماماً من حساب الإحصائيات
+android/** linguist-vendored
+ios/** linguist-vendored
+windows/** linguist-vendored
+linux/** linguist-vendored
+macos/** linguist-vendored
+web/** linguist-vendored
 
-# إخفاء مجلدات المنصات بالكامل من التقييم
-android/** linguist-detectable=false
-ios/** linguist-detectable=false
-windows/** linguist-detectable=false
-linux/** linguist-detectable=false
-macos/** linguist-detectable=false
-web/** linguist-detectable=false
-
-# تأكيد أن Dart هي اللغة الأساسية للمشروع
-*.dart linguist-detectable=true
+# اعتبار أي كود غير دارت كملفات توثيق لا تدخل في النسبة
+*.cpp linguist-documentation
+*.h linguist-documentation
+*.cmake linguist-documentation
